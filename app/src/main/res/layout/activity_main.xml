@@ -10,12 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/edit_link"
+            android:id="@+id/website_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -25,18 +26,20 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="http://developer.android.com" />
+            android:text="@string/edittext_uri" />
 
         <Button
-            android:id="@+id/b_link"
+            android:id="@+id/open_website_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:text="Open website" />
+            android:layout_marginBottom="24dp"
+            android:onClick="openWebsite"
+            android:text="@string/button_uri" />
 
         <EditText
-            android:id="@+id/edit_location"
+            android:id="@+id/location_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,18 +49,19 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Golden Gate Bridge" />
+            android:text="@string/edittext_loc" />
 
         <Button
-            android:id="@+id/b_location"
+            android:id="@+id/open_location_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:text="Open location" />
+            android:onClick="openLocation"
+            android:text="@string/button_loc" />
 
         <EditText
-            android:id="@+id/edit_share"
+            android:id="@+id/share_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -67,15 +71,16 @@
             android:layout_marginRight="16dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="'Twas brilling and the slithy toves" />
+            android:text="@string/edittext_share" />
 
         <Button
-            android:id="@+id/b_share"
+            android:id="@+id/share_text_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:text="Share the text" />
+            android:onClick="shareText"
+            android:text="@string/button_share" />
 
     </LinearLayout>
 
