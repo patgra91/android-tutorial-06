@@ -6,6 +6,7 @@ import androidx.core.app.ShareCompat;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -60,5 +61,19 @@ public class MainActivity extends AppCompatActivity {
                 .setChooserTitle(R.string.share_text_with)
                 .setText(txt)
                 .startChooser();
+    }
+
+    public void onButtonTakePicture(View view) {
+        /*
+            https://developer.android.com/guide/components/intents-common#Camera
+            https://developer.android.com/reference/android/provider/MediaStore#ACTION_IMAGE_CAPTURE
+        * */
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Failed: Camera intent");
+        }
     }
 }
